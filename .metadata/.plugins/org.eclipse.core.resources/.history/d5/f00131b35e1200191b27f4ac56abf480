@@ -1,0 +1,8 @@
+package com.brigelabz.utility;
+
+public class Utility {
+ public void add()
+ {
+	 System.out.println("hello");
+ }
+}

@@ -1,0 +1,13 @@
+package com.bridgelabz.functional;
+
+import com.brigelabz.utility.Utility;
+
+public class StringReplace {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Utility utility = new Utility();
+		utility.add();
+	}
+
+}
