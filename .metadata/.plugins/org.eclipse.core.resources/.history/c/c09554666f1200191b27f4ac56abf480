@@ -1,0 +1,22 @@
+package com.brigelabz.utility;
+
+import java.util.Scanner;
+
+public class Utility 
+{
+	Scanner sc1=new Scanner(System.in); 
+	String username =sc1.next();
+	
+	public void ensureThree()
+	{
+		if(username.length()<3)
+		{
+			System.out.println("Please re-enter 'username'");
+		}
+		else
+		{
+			
+		}
+	}
+}
+

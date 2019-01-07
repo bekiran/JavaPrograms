@@ -1,0 +1,16 @@
+package com.brigelabz.utility;
+
+import java.util.Scanner;
+
+public class Utility 
+{
+	
+	public void ensureThree()
+	{
+		Scanner sc1=new Scanner(System.in); 
+		
+	}
+	
+}
+
+
