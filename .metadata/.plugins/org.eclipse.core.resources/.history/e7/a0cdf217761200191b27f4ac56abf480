@@ -7,7 +7,7 @@ public class Utility
 	public void stringReplace() {
 		// TODO Auto-generated method stub
 		Scanner sc1=new Scanner(System.in);
-		String template="Hello <<Username>>, how are you?";
+		String template="Hello <<Username>> how are you?";
 		System.out.println("Enter user name");
 		String name=sc1.next();
 		if(name.length()<3)
