@@ -1,0 +1,16 @@
+package com.bridgelabz.functional;
+
+public class FlipCoin 
+{
+
+	public static void main(String[] args) 
+	{
+		FlipCoin coin= new FlipCoin();
+		int count = 10;
+		int k=coin.headOrTailCoin(count);
+		System.out.println(k);
+		
+
+	}
+
+}

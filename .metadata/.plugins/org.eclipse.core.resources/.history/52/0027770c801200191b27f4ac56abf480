@@ -1,0 +1,18 @@
+package com.bridgelabz.functional;
+
+import com.brigelabz.utility.Utility;
+
+public class FlipCoin 
+{
+
+	public static void main(String[] args) 
+	{
+		Utility coin= new Utility();
+		int count = 10;
+		int k=coin.headOrTailCoin(count);
+		System.out.println(k);
+		
+
+	}
+
+}

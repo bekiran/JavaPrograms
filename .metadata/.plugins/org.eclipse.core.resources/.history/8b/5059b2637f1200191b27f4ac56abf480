@@ -1,0 +1,24 @@
+package com.brigelabz.utility;
+
+import java.util.Scanner;
+
+public class Utility 
+{
+	public void stringReplace() {
+		// TODO Auto-generated method stub
+		Scanner sc1=new Scanner(System.in);
+		String template="Hello <<Username>>, how are you?";
+		System.out.println("Enter user name");
+		String name=sc1.next();
+		if(name.length()<3)
+		{
+			stringReplace();
+			name=sc1.next();	
+		}
+		String str = template.replaceAll("<<Username>>", name);
+		System.out.println(str);
+	}
+	
+}
+
+

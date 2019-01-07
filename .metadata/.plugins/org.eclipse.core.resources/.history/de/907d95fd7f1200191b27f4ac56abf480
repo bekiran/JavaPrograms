@@ -37,8 +37,8 @@ public class Utility
 		if(n<0)
 		{
 			System.out.println("Please enter valid number");
-			n=sc1.nextInt();
-			headOrTailCoin();
+			int n1=sc1.nextInt();
+			headOrTailCoin(n1);
 		}
 		for(int i=0;i<n;i++)
 		{

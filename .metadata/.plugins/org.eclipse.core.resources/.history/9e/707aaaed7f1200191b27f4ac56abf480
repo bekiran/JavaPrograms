@@ -26,19 +26,17 @@ public class Utility
 		
 	// Flip coins to find number of head and tail
 		
-	public  int headOrTailCoin()
+	public  int headOrTailCoin(int n)
 	{
 		long head=0, tail =0;
 		int headcount = 0, tailcount = 0;
 		
 		System.out.println("Enter number of times you wish to filp the coin");
-		int n=sc1.nextInt();
-		
 		if(n<0)
 		{
 			System.out.println("Please enter valid number");
-			n=sc1.nextInt();
-			headOrTailCoin();
+			int n1=sc1.nextInt();
+			headOrTailCoin(n1);
 		}
 		for(int i=0;i<n;i++)
 		{

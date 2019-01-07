@@ -1,0 +1,11 @@
+package com.bridgelabz.functional;
+
+public class LeapYear {
+
+	public static void main(String[] args) 
+	{
+		LeapFind l=new LeapFind();
+
+	}
+
+}
