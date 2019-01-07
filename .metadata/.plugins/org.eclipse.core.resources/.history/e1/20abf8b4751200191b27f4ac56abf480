@@ -12,8 +12,9 @@ public class Utility
 		String name=sc1.next();
 		if(name.length()<3)
 		{
+			//System.out.println("Re-enter user name");
+			name=sc1.next();
 			stringReplace();
-			name=sc1.next();	
 		}
 		String str = template.replaceAll("<<Username>>", name);
 		System.out.println(str);

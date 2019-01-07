@@ -10,11 +10,6 @@ public class Utility
 		String template="Hello <<Username>> how are you?";
 		System.out.println("Enter user name");
 		String name=sc1.next();
-		if(name.length()<3)
-		{
-			stringReplace();
-			name=sc1.next();	
-		}
 		String str = template.replaceAll("<<Username>>", name);
 		System.out.println(str);
 	}
