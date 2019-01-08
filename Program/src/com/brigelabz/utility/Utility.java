@@ -4,7 +4,17 @@ import java.util.Scanner;
 
 public class Utility 
 {	
-	Scanner sc1=new Scanner(System.in);
+	static Scanner sc1=new Scanner(System.in);
+	
+	public static int inputInteger()
+	{
+		return sc1.nextInt();
+	}
+	
+	
+//---------------------------------------------------------------------------------------------------------------------------
+	
+	// 1. String Replace
 	
 		public void stringReplace() 
 		{
@@ -24,11 +34,13 @@ public class Utility
 			
 		}
 		
-	// Flip coins to find number of head and tail
+//----------------------------------------------------------------------------------------
+		
+	// 2. Flip coins to find number of head and tail
 		
 	public  int headOrTailCoin()
 	{
-		long head=0, tail =0;
+		long head = 0, tail = 0;
 		int headcount = 0, tailcount = 0;
 		
 		System.out.println("Enter number of times you wish to filp the coin");
@@ -50,14 +62,16 @@ public class Utility
 			}
 			else
 			{
-				System.out.println("Occurance of tail is "+i);
+				System.out.println("Occurance of head is "+i);
 				headcount=headcount+1;
 			}
 		}
 		
 		System.out.println("Head Count = "+headcount);
 		System.out.println("Tail count = "+tailcount);
-		
+		int tailPercent=(tailcount/n);
+		int headPercent=(headcount/n);
+		System.out.println("Percentage of head vs tail: "+headPercent+":"+tailPercent);
 		
 		if(headcount>tailcount)
 		{
@@ -69,8 +83,10 @@ public class Utility
 		}
 		return n;
 	}
+
+//--------------------------------------------------------------------------------------------------------
 	
-	//Leap year
+	// 3. Leap year
 	
 	public  void leapFind(int year)
 	{
@@ -89,6 +105,104 @@ public class Utility
 			System.out.println(year+" is not Leap Year");
 		}
 	}
+	
+//---------------------------------------------------------------------------------------------------------
+	
+	// 4. power of 2 
+	
+	public static void powerOfTwo(int num)
+	{
+		//int n = 8;
+		 
+        int i = 1;
+        int power = 1;
+		System.out.println("Powers of 2 that are less than 2^"+num);
+        while (i <= num)
+        {	 
+            
+            System.out.println("2^"+i+" = " + power);
+            power = power * 2;
+            i++;
+        }
+		
+	}
+	
+//---------------------------------------------------------------------------------------------------------
+	
+	// 5. harmonic program
+	
+	public static void Harmonic(int N)
+	{	double result=0.0; 
+		//int i=1;
+		while(N>0)
+		{
+		result=result+(double) 1/N;	
+		N--;
+		System.out.println("result: "+result);
+		}
+		System.out.println("The result of harmonic series is: "+result);
+	}
+	
+//--------------------------------------------------------------------------------------------------------
+	
+	// 6. Factor
+	
+	public static void Factor(int N)
+	{
+		while(N%2==0)
+		{
+			System.out.print(2+" ");
+			N/=2;
+		}
+		for(int i=3;i<Math.sqrt(N);i+=2)
+		{
+			while(N%i==0)
+			{
+				System.out.print(i+" ");
+				N/=i;
+			}
+		}
+		if(N>2)
+		{
+			System.out.print(N+" ");
+		}
+	}
+
+//---------------------------------------------------------------------------------------------------------------------
+
+	// 7. gambler
+	
+	public static void gambler(int stake, int trails, int target)
+	{
+		int win=0, loss=0;
+		
+		for(int i =0; i<trails;i++) 
+		{
+			while(stake>0 && stake<target && trails>0)
+			{
+				if(Math.random()>0.5)
+				{
+					stake++;
+					win++;
+					trails--;
+				}
+				else
+				{
+					stake--;
+					loss++;
+					trails--;
+				}
+			}
+		}
+		double percentwin = (win*100)/(win+loss);
+		double percentloss= (loss*100)/(win+loss);
+		
+		System.out.println("The Player won = "+win);
+		System.out.println("The player lost = "+loss);
+		System.out.println("Percentage of win is "+percentwin+"%");
+		System.out.println("Percentage of loss is "+percentloss+"%");
+	}
 }
+
 
 

@@ -1,0 +1,21 @@
+package com.bridgelabz.functional;
+
+import com.brigelabz.utility.Utility;
+
+public class HarmonicSeries {
+public static void main(String[] args)
+{
+	System.out.println("Enter a number till which you want harmonic series");
+	int number = Utility.inputInteger();
+	double result=0; 
+	while(result<number)
+	{
+	for(int i=1; i<=number; i++)
+	{
+	result+=(float)(1/i);	
+	
+	}
+	System.out.println("Series: "+result);
+}
+}
+}
